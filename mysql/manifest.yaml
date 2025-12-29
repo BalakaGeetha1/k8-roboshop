@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: mysql
+  name: mysql-config
   namespace: roboshop
 data:
   my.cnf: |
@@ -53,7 +53,7 @@ spec:
         volumeMounts:
         - name: mysql-config
           mountPath: /etc/mysql/conf.d/my.cnf
-          subpath: my.cnf
+          subPath: my.cnf
 
       volumes:
         - name: mysql-config
