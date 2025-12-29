@@ -54,10 +54,10 @@ spec:
         - name: mysql-config
           mountPath: /etc/mysql/conf.d/my.cnf
           subpath: my.cnf
-    volumes:
-      - name: mysql-config
-        configMap:
-          name: mysql-config
+      volumes:
+        - name: mysql-config
+          configMap:
+            name: mysql-config
 ---
 apiVersion: v1
 kind: Service
