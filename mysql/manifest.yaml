@@ -38,18 +38,18 @@ spec:
       - name: mysql
         image: geethab70/mysql:v1
         imagePullPolicy: Always 
-        readinessProbe:
-          tcpSocket:
-            port: 3306
-          initialDelaySeconds: 10
-          periodSeconds: 10
-          #failureThreshold: 6
-        livenessProbe:
-          tcpSocket:
-            port: 3306
-          initialDelaySeconds: 20
-          periodSeconds: 5
-          #failureThreshold: 6
+        # readinessProbe:
+        #   tcpSocket:
+        #     port: 3306
+        #   initialDelaySeconds: 10
+        #   periodSeconds: 10
+        #   #failureThreshold: 6
+        # livenessProbe:
+        #   tcpSocket:
+        #     port: 3306
+        #   initialDelaySeconds: 20
+        #   periodSeconds: 5
+        #   #failureThreshold: 6
         volumeMounts:
         - name: mysql-config
           mountPath: /etc/mysql/conf.d/my.cnf
